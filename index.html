@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Resizer</title>
+</head>
+<body>
+  <h2>Image resizing and watermark making </h2>
+  <br>
+    <form enctype="multipart/form-data" method="post" \
+          action="/cgi-bin/web-watermarker.py">
+      <p> Choose an image to process: </p>
+        <input type="file" name="filename" size="30">
+      <p> Enter the width <b>and</b> height of image box if you want to resize
+        your image (optional): </p>
+        width:
+        <input type="text" name="width" size="4">
+        height:
+        <input type="text" name="height" size="4">
+      <p> Choose a watermark image (optional): </p>
+        <input type="file" name="watermark_image" size="30">
+      <p> Type a text to add as a watermark (optional): </p>
+        <input type="text" name="text_watermark" size="30">
+        <p> Watermark text angle in degrees (optional):
+          <input type="text" name="angle" size="2"> </p>
+        <p> Watermark opacity (from 0 to 1, optional, default=0.25):
+          <input type="text" name="opacity" size="2"> </p>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
